@@ -37,16 +37,14 @@ fi
 
 # Always remove lib.sh, before downloading it
 rm -rf /tmp/lib.sh
-curl -sSL -o /tmp/lib.sh "$GITHUB_BASE_URL"/"$GITHUB_SOURCE"/lib/lib.sh
+curl -sSL -o /tmp/lib.sh https://raw.githubusercontent.com/pterodactyl-installer/pterodactyl-installer/v0.12.1/lib/lib.sh
 # shellcheck source=lib/lib.sh
 source /tmp/lib.sh
 
 execute() {
   echo -e "\n\n* sapphirecloud-installer $(date) \n\n" >>$LOG_PATH
 
-  [[ "$1" == *"canary"* ]] && export GITHUB_SOURCE="master" && export SCRIPT_RELEASE="canary"
   update_lib_source
-  run_ui "${1//_canary/}" |& tee -a $LOG_PATH
 
   if [[ -n $2 ]]; then
     echo -e -n "* Installation of $1 completed. Do you want to proceed to $2 installation? (y/N): "
