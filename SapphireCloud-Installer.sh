@@ -25,6 +25,21 @@ set -e
 export GITHUB_SOURCE="v0.12.1"
 export SCRIPT_RELEASE="v0.12.1"
 export GITHUB_BASE_URL="https://raw.githubusercontent.com/VsprKunz/SapphireCloud-Installer"
+COLOR_MAGENTA='\033[0;35m'
+
+yhgitu() {
+  echo "###############################################################################"
+  echo "#                                                                             #"
+  echo "#                       ${COLOR_MAGENTA}SapphireCloud Installer${COLOR_NC}                               #"
+  echo "#                                                                             #"
+  echo "#                    official script for SapphireCloud                        #"
+  echo "#                                                                             #"
+  echo "#                                                                             #"
+  echo "#                             Made By Vspr                                    #"
+  echo "#                       Copyright (C) 2022, Vspr                              #"
+  echo "#                                                                             #"
+  echo "###############################################################################"
+}
 
 LOG_PATH="/var/log/sapphirecloud-installer.log"
 
@@ -58,7 +73,7 @@ execute() {
   fi
 }
 
-welcome ""
+yhgitu ""
 
 done=false
 while [ "$done" == false ]; do
