@@ -37,7 +37,7 @@ fi
 
 # Always remove lib.sh, before downloading it
 rm -rf /tmp/lib.sh
-curl -sSL -o /tmp/lib.sh https://raw.githubusercontent.com/pterodactyl-installer/pterodactyl-installer/v0.12.1/lib/lib.sh
+curl -sSL -o /tmp/lib.sh https://raw.githubusercontent.com/VsprKunz/SapphireCloud-Installer/main/lib/lib.sh
 # shellcheck source=lib/lib.sh
 source /tmp/lib.sh
 
