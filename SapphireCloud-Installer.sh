@@ -24,7 +24,7 @@ set -e
 
 export GITHUB_SOURCE="v0.12.1"
 export SCRIPT_RELEASE="v0.12.1"
-export GITHUB_BASE_URL="https://raw.githubusercontent.com/pterodactyl-installer/pterodactyl-installer"
+export GITHUB_BASE_URL="https://raw.githubusercontent.com/VsprKunz/SapphireCloud-Installer"
 
 LOG_PATH="/var/log/sapphirecloud-installer.log"
 
@@ -92,7 +92,7 @@ while [ "$done" == false ]; do
     "auto_backup"
   )
 
-  output "Mau yang mana ganteng? >//<"
+  echo "Mau yang mana ganteng? >//<"
 
   for i in "${!options[@]}"; do
     output "[$i] ${options[$i]}"
